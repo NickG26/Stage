@@ -13,3 +13,12 @@ The next few images are results from training 2 epochs with weighted values [1, 
 
 ### My assumption
 It needs to be said that I trained the model 4 times in total. I don't know if the 3 previous training sessions have an influence on the final result. At first glance it seemed like it always improved, so I would say that It does have an influence. 
+<br>
+The increasing accuracy can then also be a result of overfitting. 
+
+## Start model from scratch
+After unweighted training of the model:
+
+![result 1](./images/segmentatie_result_2.1.JPG)
+![result 2](./images/segmentatie_result_2.2.JPG)
+![result 3](./images/segmentatie_result_2.3.JPG)
