@@ -71,6 +71,20 @@ Now when I navigate to [localhost:8080](http://localhost:8080/) I see the CVAT w
 Now I can open a task and start to annotate images. I needed to save and than export the task dataset under 'Menu'.<br>
 The format I requested was COCO 1.0. Then a download starts and I get the image and the annotation in json format, more specifically the COCO 1.0 version.
 
+### Trying out git
+When I created a task with a git repository linked to it, the synchronization didn't work. When synchronizing it was searching for id 'master', but this has to be 'main'. 
+<br>
+In the container I looked in the git directory and it seems that this doesn't cause the error.<br>
+In the container I looked in the error logs and it references some scripts. I assume that 'master' is hardcoded in this script.<br>
+It was faster to create a new repository with branch name master than to change the source files. In docker compose it also pulled its sourcefiles from an online source so I couldn't realy change them.
+
+## Usefull hacks
+
+| Command | Explanation |
+| -- | -- |
+| winpty docker exec -it cvat bash | Go in the terminal and do some magic. |
+| git branch -M master | force change the branch name to master |
+
 ## What I know
 The annotation tasks will be done by Viu More and that's why it needs to be accessed easily for Viu More employees.
 
